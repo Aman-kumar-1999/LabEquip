@@ -1,26 +1,74 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --shadow-input-shadow: 0 63px 59px rgba(26, 33, 188, 0.1);
+  --shadow-course-shadow: 0 40px 20px rgba(0, 0, 0, 0.15);
+  --shadow-testimonial-shadow1: 0 5.54348px 11.087px rgba(89, 104, 118, 0.05);
+  --shadow-testimonial-shadow2: 5.54348px 38.8043px 110.87px
+    rgba(89, 104, 118, 0.15);
+
+  --color-primary: #6556ff;
+  --color-secondary: #1a21bc;
+  --color-grey: #57595f;
+  --color-slate-gray: #f6faff;
+  --color-deep-slate: #d5effa;
+  --color-success: #43c639;
+  --color-midnight_text: #222c44;
+
+  --spacing-75\%: 75%;
+
+  --text-40: 2.5rem;
+  --text-65: 4.063rem;
+
+  --breakpoint-xs: 28rem;
+  --background-image-newsletter-bg: url('/images/newsletter/bgFile.webp');
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto w-full px-4;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  section {
+    @apply py-14;
+  }
+
+  h1 {
+    @apply text-black sm:text-65 text-5xl
+  }
+
+  h2 {
+    @apply text-black sm:text-5xl text-40 font-semibold
+  }
+
+  h6 {
+    @apply text-black text-2xl font-semibold
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slick-dots {
+  color: #1a21bc;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #1a21bc !important;
+}
+
+.slick-dots li button:before {
+  font-size: 11px !important;
 }

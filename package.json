@@ -9,19 +9,46 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.14.1",
+    "@iconify/icons-ion": "^1.2.10",
+    "@iconify/react": "^6.0.0",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/lab": "^7.0.0-beta.16",
+    "@mui/material": "^7.3.1",
+    "@tabler/icons-react": "^3.34.1",
+    "aos": "^2.3.4",
+    "apexcharts": "^5.3.3",
+    "axios": "^1.11.0",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.12",
+    "gray-matter": "^4.0.3",
+    "lodash": "^4.17.21",
+    "next": "15.4.6",
+    "next-auth": "^4.24.11",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
+    "react-apexcharts": "^1.7.0",
     "react-dom": "19.1.0",
-    "next": "15.4.6"
+    "react-hot-toast": "^2.6.0",
+    "react-mui-sidebar": "^1.6.3",
+    "react-slick": "^0.31.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20.19.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.4.6",
     "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.6",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5.9.2"
   }
 }
