@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Hero from "@/app/components/Home/Hero";
 import Companies from "@/app/components/Home/Companies";
