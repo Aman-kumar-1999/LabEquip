@@ -133,7 +133,7 @@ a span {
     --container-max: 1200px;
     --container-pad: clamp(16px, 4vw, 48px);
     /* Logo */
-    --logo-url: url(/images/logo/logo_lab.png)
+    --logo-url: url("/images/logo/logo.png");
 }
 
 /***** Light Mode Alias *****/
@@ -520,7 +520,7 @@ body::before {
 /* 7) Components */
 /* Header / Navigation */
 .x-header {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: var(--z-sticky);
     background: color-mix(in oklab, var(--surface-2), white 12%);
@@ -538,14 +538,15 @@ body::before {
 }
 
 .x-logo {
-    width: 200px;   
+    width: 150px;   
     height: 70px;
-    /* size: 30px; */
-    /* background-image: var(--logo-url); */
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* border-radius: 6px */
+    size: 30px;
+    background-image: var(--logo-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    margin-left: 30px;
 
 
 }

@@ -13,7 +13,7 @@ import Newsletter from "@/app/components/Home/Newsletter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lab Equipments",
+  title: "LabEquip",
 };
 
 export default function Home() {

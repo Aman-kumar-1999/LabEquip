@@ -1,6 +1,8 @@
 import { Poppins } from 'next/font/google'
+import Script from "next/script";
 import './globals.css'
-import Header from '@/app/components/Layout/Header'
+// import Header from '@/app/components/Layout/Header'
+import HeaderPage from '@/app/components/Header'
 import Footer from '@/app/components/Layout/Footer'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "sweetalert2/dist/sweetalert2.min.css";
@@ -11,7 +13,14 @@ const font = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 })
-
+export const metadata = {
+  
+  icons: {
+    icon: "/logo.png", // default favicon
+    shortcut: "/logo.png",
+    apple: "/apple-touch-icon.png", // for iOS home screen
+  },
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,18 +43,19 @@ export default function RootLayout({
         /> */}
       </head>
       <body className={`${font.className}`}>
-        <Header />
+        {/* <Header /> */}
+        <HeaderPage />
         {children}
         <Footer />
         {/* <ScrollToTop /> */}
       </body>
-      <script crossOrigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js">
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js">
-      </script>
+      <Script crossOrigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"/>
+      
+      <Script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"/>
+      
+      <Script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"/>
+      
     </html>
   )
 }

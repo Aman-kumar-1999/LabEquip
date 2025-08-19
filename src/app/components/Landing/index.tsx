@@ -43,7 +43,7 @@ const tableData: Product[] = [
 ];
 
 
-const Hero = () => {
+export default function LandingPage() {
 
 
   // export default function DashboardPage() {
@@ -905,4 +905,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+// export default Hero

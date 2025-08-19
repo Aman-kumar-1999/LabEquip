@@ -81,13 +81,13 @@ const Header: React.FC = () => {
 
     return (
 
-        <header className="x-header shadow-sm">
+        <header className="x-header shadow-sm fixed-top">
             <nav aria-label="Primary Navigation" className="navbar navbar-expand-lg x-header__inner">
                 <div className="container-fluid px-0">
                     <a aria-label="Go to Home" className="d-flex align-items-center" href="/">
-                        <img src="/images/logo/logo_lab.png" alt="Company Logo" className="x-logo me-2" />
-                        {/* <span aria-label="Company Logo" className="x-logo me-2" role="img">
-                    </span> */}
+                        {/* <img src="logo.png" alt="Company Logo" className="x-logo me-2" /> */}
+                        <span aria-label="Company Logo" className="x-logo me-2" role="img">
+                    </span>
                         {/* <span className="fw-bold d-none d-md-inline">
                         LabEquip
                     </span> */}
