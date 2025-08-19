@@ -1,0 +1,100 @@
+/* Admin Returns Management - Page Specific Styles (admin_returns.css) */
+html, body {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* App Shell Layout */
+.app-shell {
+    background: var(--surface-1)
+    }
+.app-sidebar {
+    width: 260px;
+    min-height: calc(100vh - 0);
+    position: sticky;
+    top: 64px;
+    /* aligns under sticky header */
+    align-self: flex-start;
+    background: var(--surface-2)
+    }
+@media (max-width: 991.98px) {
+    .app-sidebar {
+        display: none
+        }
+    }
+.app-main {
+    min-width: 0
+    }
+/* Sidebar styling (kept consistent across pages) */
+.sidebar-header {
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in oklab, var(--surface-2), white 8%)
+    }
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: var(--radius-md)
+    }
+.sidebar-nav .nav-link i {
+    width: 20px;
+    text-align: center;
+    color: var(--text-muted)
+    }
+.sidebar-nav .nav-link:hover {
+    background: var(--surface-3);
+    text-decoration: none
+    }
+.sidebar-nav .nav-link.active, .sidebar-nav .nav-link[aria-current="page"] {
+    background: var(--primary-50);
+    color: var(--text)
+    }
+/* Sortable headers cue */
+th.sortable {
+    user-select: none
+    }
+th.sortable i {
+    color: var(--text-muted);
+    margin-left: 4px
+    }
+/* Status badge custom style for Processing Refund */
+.x-badge.status-processing {
+    color: var(--color-info);
+    border-color: color-mix(in oklab, var(--color-info), white 70%);
+    background: color-mix(in oklab, var(--color-info), white 92%)
+    }
+/* Responsive adjustments */
+#tableWrap {
+    overflow-x: auto
+    }
+/* SweetAlert2 tweaks to better match theme */
+.swal2-popup {
+    border-radius: var(--radius-lg)
+    }
+.swal2-confirm.swal2-styled {
+    background: var(--color-primary) !important;
+    box-shadow: var(--shadow-glow)
+    }
+.swal2-deny.swal2-styled {
+    background: var(--color-error) !important
+    }
+/* Charts card height consistency */
+#returnsTrendChart, #statusDoughnut {
+    max-width: 100%
+    }
+/* Pagination alignment */
+.pagination .page-link {
+    color: var(--text)
+    }
+.pagination .page-item.active .page-link {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--text-inverse)
+    }
+/* Ensure sticky header does not overlap content */
+.x-header {
+    z-index: var(--z-sticky)
+    }
+.app-main .l-container {
+    padding-top: var(--space-4)
+    }

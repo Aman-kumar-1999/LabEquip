@@ -1,0 +1,47 @@
+/* account_settings.css - Page specific styles for Account Settings */
+/* Layout refinements */
+.settings-wrapper {
+    align-items: flex-start
+    }
+.settings-sidebar {
+    max-height: calc(100vh - 110px);
+    overflow: auto
+    }
+/* Left local settings nav: use Bootstrap pills but align with theme */
+#settingsTabs .nav-link {
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    color: var(--text-muted)
+    }
+#settingsTabs .nav-link.active {
+    background: var(--primary-50);
+    color: var(--text);
+    box-shadow: var(--shadow-sm)
+    }
+/* Forms: tighter spacing on help text */
+.x-field .x-help {
+    margin-top: 2px
+    }
+/* Address cards: emphasize name */
+#addressesList .x-card .fw-bold {
+    font-size: 1.05rem
+    }
+/* Activity table: clickable sort header */
+#thDate {
+    user-select: none
+    }
+#thDate:hover {
+    text-decoration: underline
+    }
+/* Chart canvas responsiveness within card */
+#loginChart {
+    width: 100% !important;
+    height: auto !important
+    }
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+    .settings-sidebar {
+        top: 0 !important;
+        max-height: none
+        }
+    }

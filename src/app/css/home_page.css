@@ -1,0 +1,86 @@
+/* Home Page Specific Styles (home_page.css) */
+/* Hero caption overlay: provide contrast readable area */
+.hero-caption {
+    left: 6%;
+    right: auto;
+    bottom: 10%;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35)
+    }
+.hero-caption .btn {
+    box-shadow: var(--shadow-glow)
+    }
+/* Ensure carousel images maintain aspect on large screens */
+.object-fit-cover {
+    object-fit: cover;
+    max-height: 640px
+    }
+/* Category cards */
+.category-card {
+    transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+    overflow: hidden
+    }
+.category-card:hover {
+    transform: translatey(-4px);
+    box-shadow: var(--shadow-lg)
+    }
+.category-card .card-img-top {
+    height: 180px;
+    object-fit: cover
+    }
+.category-card .card-body {
+    background: var(--surface-2)
+    }
+/* Product cards */
+.product-card .card-img-top {
+    height: 220px;
+    object-fit: cover
+    }
+.product-card .card-body h5 {
+    font-weight: 700
+    }
+/* Search suggestions dropdown alignment */
+#search-suggestions {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    max-height: 280px;
+    overflow-y: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    padding: 6px 0;
+    background: var(--surface-2);
+    z-index: var(--z-overlay)
+    }
+#search-suggestions .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 6px
+    }
+/* Table controls spacing */
+.table-controls .form-control, .table-controls .form-select {
+    min-width: 180px
+    }
+/* Pagination look (integrate with theme) */
+.pagination .page-link {
+    border-radius: var(--radius-pill)
+    }
+/* Toast width responsiveness */
+.x-toast-stack .x-toast {
+    min-width: 260px
+    }
+/* Chart canvas spacing */
+#visitsChart {
+    width: 100% !important
+    }
+@media (max-width: 576px) {
+    .category-card .card-img-top {
+        height: 140px
+        }
+    .product-card .card-img-top {
+        height: 180px
+        }
+    .object-fit-cover {
+        max-height: 420px
+        }
+    }

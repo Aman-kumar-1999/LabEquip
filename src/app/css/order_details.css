@@ -1,0 +1,86 @@
+:root {
+    --font-sans: "Poppins", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Inter, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    }
+/* Page-specific: order_details.css */
+#main {
+    position: relative;
+    z-index: 1
+    }
+/* Status badge styling based on data-status */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700
+    }
+.status-badge .x-status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    display: inline-block
+    }
+.status-badge[data-status="Paid"] {
+    color: var(--color-success);
+    border-color: color-mix(in oklab, var(--color-success), white 70%);
+    background: color-mix(in oklab, var(--color-success), white 92%)
+    }
+.status-badge[data-status="Paid"] .x-status-dot {
+    background: var(--color-success)
+    }
+.status-badge[data-status="Processing"] {
+    color: var(--color-warning);
+    border-color: color-mix(in oklab, var(--color-warning), white 60%);
+    background: color-mix(in oklab, var(--color-warning), white 90%)
+    }
+.status-badge[data-status="Processing"] .x-status-dot {
+    background: var(--color-warning)
+    }
+.status-badge[data-status="Shipped"] {
+    color: var(--color-info);
+    border-color: color-mix(in oklab, var(--color-info), white 70%);
+    background: color-mix(in oklab, var(--color-info), white 92%)
+    }
+.status-badge[data-status="Shipped"] .x-status-dot {
+    background: var(--color-info)
+    }
+.status-badge[data-status="Delivered"] {
+    color: var(--color-success);
+    border-color: color-mix(in oklab, var(--color-success), white 70%);
+    background: color-mix(in oklab, var(--color-success), white 92%)
+    }
+.status-badge[data-status="Delivered"] .x-status-dot {
+    background: var(--color-success)
+    }
+.status-badge[data-status="Cancelled"] {
+    color: var(--color-error);
+    border-color: color-mix(in oklab, var(--color-error), white 70%);
+    background: color-mix(in oklab, var(--color-error), white 92%)
+    }
+.status-badge[data-status="Cancelled"] .x-status-dot {
+    background: var(--color-error)
+    }
+/* Improve table visuals for this page */
+#itemsTable td img {
+    object-fit: cover
+    }
+#itemsTable thead th {
+    white-space: nowrap
+    }
+#itemsTable thead th.sortable:hover {
+    text-decoration: underline
+    }
+/* Toolbar alignment tweaks on small screens */
+@media (max-width: 576px) {
+    .x-toolbar {
+        gap: 8px
+        }
+    }
+/* Admin panel fine-tuning */
+#adminPanel .x-card__header {
+    background: var(--bg-inset)
+    }
+/* Loading overlay blur effect on main content when active */
+#loadingOverlay:not(.d-none) ~ * {
+    filter: none
+    }

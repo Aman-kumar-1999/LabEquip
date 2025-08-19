@@ -1,0 +1,63 @@
+/* cart_page.css - Page specific styles for Shopping Cart */
+/* Use brand typography */
+html {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Ensure product thumbnails have consistent size */
+.cart-thumb {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover
+    }
+/* Quantity control spacing */
+.qty-control .btn {
+    width: 32px;
+    height: 32px;
+    display: inline-grid;
+    place-items: center
+    }
+.qty-input {
+    max-width: 64px
+    }
+/* Make the summary panel sticky on larger screens */
+@media (min-width: 992px) {
+    .summary-sticky {
+        position: sticky;
+        top: 90px
+        }
+    }
+/* Empty state illustration size */
+.empty-illustration {
+    width: min(640px, 90%);
+    height: auto
+    }
+/* Improve breadcrumb appearance with theme variables */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0
+    }
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--text-muted)
+    }
+/* Align badges inside item name column */
+.cart-item .mt-1 .badge {
+    font-weight: 600
+    }
+/* Make remove link subtle */
+.cart-item .remove-item {
+    font-weight: 600
+    }
+.cart-item .remove-item:hover {
+    text-decoration: underline
+    }
+/* Toolbar responsiveness */
+@media (max-width: 576px) {
+    .x-toolbar {
+        gap: var(--space-2)
+        }
+    .x-search input {
+        min-width: 120px
+        }
+    }

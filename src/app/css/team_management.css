@@ -1,0 +1,72 @@
+/* Team Management Page (team_management.css) */
+/* Layout adjustments for sidebar and main content */
+.sidebar {
+    background: var(--surface-2);
+    min-height: calc(100vh - 64px);
+    /* account for header height approx */
+    }
+.sidebar-inner {
+    position: sticky;
+    top: 64px;
+    /* after header */
+    }
+.sidebar .nav-link {
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: var(--radius-md)
+    }
+.sidebar .nav-link:hover {
+    background: var(--surface-3)
+    }
+.sidebar .nav-link.active {
+    background: var(--primary-50);
+    color: var(--text);
+    font-weight: 700
+    }
+.main-content {
+    min-height: calc(100vh - 64px);
+    background: var(--bg)
+    }
+/* Table tweaks */
+#membersTable thead th {
+    user-select: none
+    }
+#membersTable tbody td .btn {
+    line-height: 1
+    }
+#membersTable .badge {
+    font-weight: 600
+    }
+/* Pagination active state */
+#pageNumbers .x-page.active, #pageNumbers .x-page[aria-current="page"] {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border-color: var(--color-primary)
+    }
+/* Toolbar controls sizing alignment */
+.x-toolbar .form-select, .x-toolbar .form-control {
+    min-width: 160px
+    }
+/* Offcanvas width for mobile */
+@media (max-width: 991.98px) {
+    .offcanvas-start {
+        width: 280px
+        }
+    }
+/* Header spacing compensation for sticky header */
+.x-header + .container-fluid .row .main-content .l-container {
+    padding-top: var(--space-5)
+    }
+/* Chart canvas responsiveness */
+#rolesChart {
+    max-height: 220px
+    }
+/* Empty state image shadow */
+#emptyState img {
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg)
+    }
+/* Small utility for button icons */
+.btn i {
+    pointer-events: none
+    }

@@ -1,0 +1,46 @@
+/* login_page.css - Page-specific styles for Login Page */
+:root {
+    --auth-overlay: rgba(0, 0, 0, 0.35)
+    }
+html, body {
+    font-family: "Poppins", var(--font-sans, ui-sans-serif), system-ui
+    }
+/* Hero background for auth screen */
+.auth-hero {
+    min-height: 70vh;
+    background-image: linear-gradient(0deg, var(--auth-overlay), var(--auth-overlay)), url(assets/login_page_background_image_1_57776a14.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative
+    }
+/* Card refinements */
+.x-card .brand-logo {
+    border-radius: 12px;
+    box-shadow: var(--shadow-md)
+    }
+/* Tighten form spacing a bit for compact view */
+@media (min-width: 768px) {
+    #loginForm .x-field {
+        gap: 4px
+        }
+    }
+/* Make the card slightly translucent to show subtle bg */
+.x-card {
+    backdrop-filter: saturate(120%) blur(2px)
+    }
+/* Improve contrast for outline btn in input-group */
+.input-group > .btn.btn-outline-secondary {
+    border-color: var(--border)
+    }
+.input-group > .btn.btn-outline-secondary:hover {
+    background: var(--surface-3)
+    }
+/* Ensure header/footer overlay above background grain */
+.x-header, .x-footer {
+    position: relative;
+    z-index: 2
+    }
+/* Alert spacing fix when shown */
+#authAlert {
+    margin-top: 0.25rem
+    }

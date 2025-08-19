@@ -1,0 +1,39 @@
+/* admin_pricing.css - Page-specific styles for Admin Pricing Management */
+/* Sidebar visual to align with global theme */
+.x-sidebar {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md)
+    }
+.x-sidebar .list-group-item.active {
+    background: var(--primary-50);
+    color: var(--text);
+    border-color: var(--primary-100);
+    font-weight: 700
+    }
+.x-sidebar .list-group-item {
+    border: none
+    }
+/* Card and table tweaks */
+#tierTable thead th[role="button"], #orgTable thead th[role="button"] {
+    user-select: none
+    }
+#tierTable thead th[role="button"] i, #orgTable thead th[role="button"] i {
+    color: var(--text-muted)
+    }
+/* Chart container */
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 260px
+    }
+/* Loading overlay animation alignment provided by global .loader */
+/* Search inputs inside x-search already styled by global CSS */
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .x-sidebar {
+        border-radius: 0;
+        border-left: none;
+        border-right: 1px solid var(--border)
+        }
+    }

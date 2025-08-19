@@ -1,0 +1,66 @@
+/* quote_details.css - Page specific styles for Quote Details */
+/* Use Poppins as primary font for this page (keeps site variables fallback) */
+body {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Sidebar width harmony and visual separation */
+#appSidebar {
+    background: var(--surface-2);
+    border-color: var(--border)
+    }
+#appSidebar .nav-link {
+    color: var(--text-muted);
+    border-radius: var(--radius-pill);
+    padding: 8px 12px
+    }
+#appSidebar .nav-link:hover {
+    color: var(--text);
+    background: var(--surface-3);
+    text-decoration: none
+    }
+/* Status badge dot size harmonization */
+#statusBadge .x-status__dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: currentColor
+    }
+/* Price input tighter width for admin editable cells */
+.price-input-group {
+    max-width: 160px
+    }
+.price-input {
+    min-width: 80px
+    }
+/* Sticky action bar inside main area */
+.quote-action-bar {
+    position: sticky;
+    bottom: 0;
+    z-index: var(--z-sticky);
+    background: var(--surface-2);
+    border-top: 1px solid var(--border)
+    }
+/* Ensure main content has bottom padding so sticky bar doesn't overlap */
+main {
+    padding-bottom: 72px
+    }
+/* Table tweaks for better compactness */
+#itemsTable thead th {
+    white-space: nowrap
+    }
+#itemsTable tbody td {
+    vertical-align: middle
+    }
+/* Chart canvas containment */
+#costChart {
+    max-width: 100%
+    }
+/* Alert area spacing */
+#alertArea .alert {
+    margin-bottom: var(--space-3)
+    }
+/* Breadcrumb minor spacing */
+.x-breadcrumb span, .x-breadcrumb a {
+    line-height: 1
+    }

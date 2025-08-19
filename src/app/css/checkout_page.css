@@ -1,0 +1,52 @@
+/* checkout_page.css - Page-specific styles for Checkout Page */
+/* Use Poppins for this page */
+html {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Sticky summary sidebar taking header height into account */
+.sticky-summary {
+    position: sticky;
+    top: 88px
+    }
+/* Progress tracker tweaks */
+#checkoutSteps .c-step {
+    font-weight: 600
+    }
+#checkoutSteps .c-step.is-complete .c-step__dot {
+    background: var(--color-success);
+    border-color: var(--color-success)
+    }
+#checkoutSteps .c-step.is-active span {
+    color: var(--text)
+    }
+/* Payment element look */
+.payment-element {
+    min-height: 56px;
+    box-shadow: var(--shadow-sm) inset
+    }
+.payment-element:focus-within {
+    outline: 3px solid color-mix(in oklab, var(--color-primary), transparent 80%)
+    }
+#mockCardInput::placeholder {
+    color: var(--text-muted)
+    }
+/* Buttons in footer of payment card */
+#paymentCard .x-card__footer .x-btn {
+    min-width: 160px
+    }
+/* Form invalid visuals harmonized with theme */
+.is-invalid {
+    border-color: var(--color-error) !important;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-error), transparent 85%) !important
+    }
+/* Compact list borders */
+.border-bottom:last-of-type {
+    border-bottom: none !important
+    }
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .sticky-summary {
+        position: static;
+        top: auto
+        }
+    }

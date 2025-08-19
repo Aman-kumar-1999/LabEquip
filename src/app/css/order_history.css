@@ -1,0 +1,67 @@
+/* order_history.css - Page specific styles (reuse global variables/classes where possible) */
+/* Layout adjustments */
+.page-wrap {
+    min-height: calc(100vh - 160px)
+    }
+.sidebar {
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 88px);
+    padding: var(--space-3)
+    }
+.sidebar .list-group-item {
+    border: 0;
+    border-bottom: 1px solid var(--border)
+    }
+.sidebar .list-group-item.active {
+    background: var(--primary-50);
+    color: var(--text);
+    font-weight: 700
+    }
+/* Table sort indicators and interactive headers */
+th.sortable {
+    user-select: none;
+    white-space: nowrap
+    }
+th.sortable:hover {
+    text-decoration: underline
+    }
+.active-page {
+    background: var(--color-primary) !important;
+    color: var(--text-inverse) !important;
+    border-color: var(--color-primary) !important
+    }
+/* Empty state */
+#emptyState img {
+    max-width: 420px;
+    width: 100%;
+    height: auto
+    }
+/* Status tweaks: provide info tint for 'Shipped' (neutral badge by default) */
+td > .x-badge i {
+    opacity: 0.9
+    }
+/* Chart card canvas responsive height */
+#ordersTrendChart {
+    min-height: 120px;
+    height: 160px
+    }
+/* Search bar alignment inside c-search-filter */
+.c-search-filter .x-search {
+    min-width: 260px
+    }
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+    .sidebar {
+        display: none
+        }
+    #ordersTrendChart {
+        height: 140px
+        }
+    }
+/* Accessibility focus in table headers */
+th.sortable:focus {
+    outline: 3px solid var(--outline);
+    outline-offset: 2px;
+    border-radius: 4px
+    }

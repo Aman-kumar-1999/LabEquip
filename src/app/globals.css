@@ -1,4 +1,8 @@
-@import 'tailwindcss';
+
+/* @import 'tailwindcss' */
+
+
+/* @import 'tailwindcss';
 
 @theme {
   --shadow-input-shadow: 0 63px 59px rgba(26, 33, 188, 0.1);
@@ -72,3 +76,5 @@ html {
 .slick-dots li button:before {
   font-size: 11px !important;
 }
+ */
+

@@ -1,0 +1,60 @@
+/* quote_history.css - Page specific styles for Quote History */
+/* Brand font override for this page */
+html, body {
+    font-family: "Poppins", var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+    }
+/* Sidebar styling aligned to theme */
+.qh-sidebar {
+    position: sticky;
+    top: 72px;
+    /* header height approx */
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg)
+    }
+.qh-sidebar .nav-link {
+    color: var(--text);
+    border-radius: var(--radius-pill);
+    padding: 8px 12px
+    }
+.qh-sidebar .nav-link:hover {
+    background: var(--surface-3)
+    }
+.qh-sidebar .nav-link.active {
+    background: var(--primary-50);
+    color: var(--color-primary);
+    font-weight: 700
+    }
+/* Table interactions */
+.qh-row-click {
+    transition: background var(--dur) var(--ease)
+    }
+.qh-row-click:hover {
+    background: color-mix(in oklab, var(--primary-50), white 50%)
+    }
+/* Loader overlay within table area */
+.qh-loader {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in oklab, white, transparent 70%);
+    z-index: var(--z-overlay)
+    }
+/* Sortable headers visual hint */
+th.sortable {
+    user-select: none
+    }
+th.sortable i {
+    margin-left: 6px;
+    color: var(--text-muted)
+    }
+/* Chart canvas sizing on small screens */
+@media (max-width: 576px) {
+    #statusChart {
+        max-height: 220px
+        }
+    }
+/* Empty state image responsiveness */
+#emptyState img {
+    width: 100%;
+    height: auto
+    }

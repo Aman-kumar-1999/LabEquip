@@ -1,0 +1,65 @@
+/* register_page.css - Page-specific styles for Register Page */
+/* Layout tweaks */
+main {
+    position: relative;
+    z-index: var(--z-base)
+    }
+.account-type-check {
+    background: var(--surface-1);
+    transition: box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease)
+    }
+.account-type-check:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary)
+    }
+.account-type-check .form-check-input {
+    float: right;
+    margin-top: 0.3rem
+    }
+/* Hero image panel */
+.register-hero {
+    position: relative;
+    min-height: 320px
+    }
+.register-hero img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block
+    }
+.register-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 128, 0.45));
+    mix-blend-mode: multiply
+    }
+.register-hero__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--space-5);
+    color: var(--text-inverse)
+    }
+/* Form visuals */
+.x-card .form-control.x-input.is-valid {
+    border-color: var(--color-success);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-success), transparent 85%)
+    }
+.x-card .form-control.x-input.is-invalid {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-error), transparent 85%)
+    }
+/* Strength bar colors refined for light theme handled by JS via Bootstrap classes */
+.progress {
+    height: 8px;
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    background: var(--bg-inset)
+    }
+/* Small responsive refinements */
+@media (max-width: 991.98px) {
+    .register-hero {
+        min-height: 240px
+        }
+    }

@@ -1,0 +1,62 @@
+/* admin_import.css - Page-specific styles for Admin Bulk Product Import */
+:root {
+    --sidebar-w: 260px
+    }
+body {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Layout shell with left sidebar */
+.admin-shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    gap: 0
+    }
+.admin-sidebar {
+    border-right: 1px solid var(--border);
+    background: var(--surface-2);
+    min-height: calc(100vh - 72px);
+    position: sticky;
+    top: 64px
+    }
+.admin-sidebar .x-nav__link {
+    display: block
+    }
+.admin-sidebar .x-nav__link.active {
+    background: var(--primary-50);
+    color: var(--text)
+    }
+.admin-sidebar__inner {
+    position: sticky;
+    top: 64px
+    }
+.admin-main {
+    padding-top: var(--space-5) !important
+    }
+/* Dropzone highlight */
+#dropzone.is-dragover {
+    border-color: var(--color-primary);
+    background: color-mix(in oklab, var(--primary-50), white 70%)
+    }
+/* Table tweaks */
+#resultsTable tbody td code {
+    background: var(--surface-3);
+    padding: 2px 6px;
+    border-radius: 4px
+    }
+/* Offcanvas overrides for coherence */
+.offcanvas {
+    background: var(--surface-2)
+    }
+.offcanvas .nav-link.active {
+    background: var(--primary-50);
+    border-radius: var(--radius-pill)
+    }
+/* Responsive */
+@media (max-width: 991.98px) {
+    .admin-shell {
+        display: block
+        }
+    .admin-sidebar {
+        display: none !important
+        }
+    }

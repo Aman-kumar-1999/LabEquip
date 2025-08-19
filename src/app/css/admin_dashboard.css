@@ -1,0 +1,142 @@
+/* admin_dashboard.css - Page-specific styles for Admin Dashboard */
+:root {
+    --admin-sidebar-w: 260px;
+    --admin-sidebar-w-collapsed: 72px;
+    --admin-header-h: 64px
+    }
+html, body {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Layout structure */
+.admin-wrapper {
+    min-height: calc(100vh - var(--admin-header-h))
+    }
+/* Sidebar */
+.admin-sidebar {
+    position: sticky;
+    top: var(--admin-header-h);
+    align-self: flex-start;
+    width: var(--admin-sidebar-w);
+    min-height: calc(100vh - var(--admin-header-h));
+    border-right: 1px solid var(--border);
+    background: var(--surface-2)
+    }
+.admin-sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    margin: 4px 8px
+    }
+.admin-sidebar .nav-link:hover {
+    background: var(--surface-3);
+    text-decoration: none
+    }
+.admin-sidebar .nav-link.active, .admin-sidebar .nav-link[aria-current="page"] {
+    background: var(--primary-50);
+    color: var(--text);
+    font-weight: 700
+    }
+.admin-sidebar .link-label {
+    white-space: nowrap
+    }
+/* Collapsed state */
+.admin-sidebar.collapsed {
+    width: var(--admin-sidebar-w-collapsed)
+    }
+.admin-sidebar.collapsed .link-label {
+    display: none
+    }
+.admin-sidebar.collapsed .nav-link i {
+    margin-right: 0 !important
+    }
+/* Main area offset relative to sidebar */
+.admin-main {
+    padding-top: calc(var(--admin-header-h) + 16px);
+    margin-left: 0
+    }
+@media (min-width: 992px) {
+    .admin-main {
+        margin-left: var(--admin-sidebar-w)
+        }
+    .admin-sidebar.collapsed + .admin-main, .admin-main.expanded {
+        margin-left: var(--admin-sidebar-w-collapsed)
+        }
+    }
+/* KPI cards */
+.kpi-card .kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: var(--text-inverse);
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-md)
+    }
+.kpi-primary {
+    background: var(--color-primary)
+    }
+.kpi-info {
+    background: var(--color-info)
+    }
+.kpi-success {
+    background: var(--color-success)
+    }
+.kpi-warning {
+    background: var(--color-warning);
+    color: #472700
+    }
+/* Table specifics */
+#recentOrdersTable tbody tr:hover {
+    background: color-mix(in oklab, var(--primary-50), white 50%)
+    }
+#recentOrdersTable .sortable i {
+    opacity: 0.5
+    }
+/* Chart canvas height control (responsive) */
+#salesChart {
+    max-height: 340px
+    }
+#statusChart {
+    max-height: 300px
+    }
+/* Header adjustments */
+.x-header {
+    /* approximate fixed height for sticky offset calculations */
+    }
+.x-header .x-header__inner {
+    min-height: var(--admin-header-h)
+    }
+/* Responsive: make sidebar overlay on small screens */
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        position: fixed;
+        top: var(--admin-header-h);
+        left: 0;
+        height: calc(100vh - var(--admin-header-h));
+        transform: translatex(0);
+        z-index: var(--z-sticky)
+        }
+    .admin-sidebar.collapsed {
+        transform: translatex(-100%);
+        width: var(--admin-sidebar-w)
+        }
+    /* Toggle button will slide it in/out by adding/removing 'collapsed' */
+    }
+/* Clickable rows */
+.order-row {
+    transition: background var(--dur) var(--ease)
+    }
+/* Accessibility helpers for visually hidden heading (Bootstrap already provides visually-hidden) */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important
+    }

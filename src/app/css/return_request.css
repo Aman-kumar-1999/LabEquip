@@ -1,0 +1,64 @@
+/* return_request.css - Page-specific styles for Request a Return */
+/* Avoid duplicating theme styles; only small adjustments below */
+.return-hero-illustration {
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-lg)
+    }
+.product-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface-1)
+    }
+.qty-input {
+    max-width: 88px;
+    margin-inline: auto
+    }
+.reason-select {
+    min-width: 200px
+    }
+/* Make disabled inputs visually dim without breaking Bootstrap */
+.qty-input.disabled, .reason-select.disabled {
+    background: var(--bg-inset);
+    opacity: 0.8;
+    cursor: not-allowed
+    }
+/* Sticky summary card spacing on small screens */
+@media (max-width: 991.98px) {
+    aside.x-card.position-sticky {
+        position: static !important;
+        top: auto !important
+        }
+    }
+/* Align table cells vertically center on narrow widths */
+@media (max-width: 575.98px) {
+    #itemsTable thead {
+        display: none
+        }
+    #itemsTable tbody tr {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 8px;
+        padding: 8px;
+        border-bottom: 1px solid var(--border)
+        }
+    #itemsTable tbody td {
+        border-bottom: 0;
+        padding: 6px 4px
+        }
+    #itemsTable tbody td:nth-child(3), #itemsTable tbody td:nth-child(4), #itemsTable tbody td:nth-child(5), #itemsTable tbody td:nth-child(6), #itemsTable tbody td:nth-child(7) {
+        grid-column: 1/-1;
+        text-align: left !important
+        }
+    .qty-input {
+        margin-inline: 0
+        }
+    }
+/* Improve dropdown shadow contrast */
+.dropdown-menu {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border)
+    }

@@ -1,0 +1,48 @@
+/* order_confirmation.css - Page specific styles for Order Confirmation */
+/* Use brand typography more prominently on this page */
+html {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Confirmation layout spacing */
+.oc-layout {
+    display: grid;
+    gap: var(--space-5)
+    }
+/* Success icon styling */
+.oc-success-icon {
+    width: 84px;
+    height: 84px;
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+    margin-bottom: var(--space-3);
+    color: var(--color-success)
+    }
+.oc-success-icon .fa-circle-check {
+    font-size: 64px
+    }
+/* Header card alignment */
+.oc-header {
+    text-align: center
+    }
+/* Table tweaks */
+#itemsTable thead th {
+    white-space: nowrap
+    }
+#itemsTable tbody td {
+    vertical-align: middle
+    }
+#itemsTable .sortable {
+    cursor: pointer
+    }
+/* Active sort button state */
+[data-sort-trigger].active {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important
+    }
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .oc-header h1 {
+        font-size: 1.25rem
+        }
+    }

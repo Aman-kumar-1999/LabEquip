@@ -1,0 +1,59 @@
+/* comparison_page.css — page-specific styles for Compare Products */
+/* Prefer Poppins on this page */
+body {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Header adjustments for compact nav on this page */
+.x-header .x-nav__link[aria-current="page"] {
+    background: var(--primary-50);
+    color: var(--text)
+    }
+/* Comparison table layout */
+.comparison-table {
+    --attr-col-w: 220px
+    }
+.comparison-table thead th, .comparison-table tbody td {
+    vertical-align: top
+    }
+.comparison-table .attribute-col {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--surface-2);
+    min-width: var(--attr-col-w);
+    max-width: var(--attr-col-w)
+    }
+.comparison-table .product-col {
+    min-width: 260px
+    }
+.comparison-table .value-cell.diff {
+    background: color-mix(in oklab, var(--primary-50), white 60%)
+    }
+/* Product column header card */
+.product-th .fw-bold a {
+    color: inherit
+    }
+.product-th .badge {
+    font-weight: 700
+    }
+/* Empty state image subtle effect */
+#emptyState img {
+    filter: saturate(110%)
+    }
+/* Toolbar compact spacing */
+.x-toolbar .form-control {
+    min-width: 220px
+    }
+/* Chart section canvas sizing */
+#chartSection canvas {
+    max-height: 320px
+    }
+/* Small screen tweaks */
+@media (max-width: 576px) {
+    .comparison-table {
+        --attr-col-w: 160px
+        }
+    .x-toolbar .form-control {
+        min-width: 160px
+        }
+    }

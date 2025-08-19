@@ -1,0 +1,89 @@
+/* Product Details Page (product_details.css)
+   Scope: minimal, page-specific enhancements leveraging global theme
+*/
+/* Use Poppins as primary font for this page */
+html {
+    font-family: "Poppins", var(--font-sans)
+    }
+/* Gallery */
+.pd-gallery {
+    background: var(--surface-1);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    padding: var(--space-3)
+    }
+.pd-main-image {
+    object-fit: contain;
+    background: var(--bg-inset)
+    }
+.pd-zoom-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    border-radius: var(--radius-pill);
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    background: color-mix(in oklab, var(--surface-2), white 10%);
+    color: var(--text);
+    box-shadow: var(--shadow-sm)
+    }
+.pd-zoom-btn:hover {
+    background: var(--surface-2);
+    box-shadow: var(--shadow-md)
+    }
+/* Thumbnails */
+.pd-thumbs {
+    padding-bottom: 6px
+    }
+.pd-thumb {
+    border-radius: var(--radius-md);
+    background: var(--surface-1)
+    }
+.pd-thumb img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md)
+    }
+.pd-thumb-active {
+    outline: 3px solid var(--outline)
+    }
+/* Tables inside tabs */
+#detailTabsContent {
+    background: var(--surface-2)
+    }
+#detailTabs .nav-link {
+    font-weight: 700
+    }
+/* Utility to ensure images maintain aspect inside Bootstrap ratio */
+.object-fit-contain {
+    object-fit: contain
+    }
+/* Accessibility focus for custom elements */
+.pd-thumb:focus-visible, .pd-zoom-btn:focus-visible {
+    outline: 3px solid var(--outline);
+    outline-offset: 2px
+    }
+/* Recommended products cards */
+#recommendedCarousel .x-card img {
+    aspect-ratio: 4/3;
+    object-fit: cover
+    }
+/* Toast stack z-index override to appear above content */
+#toastStack {
+    z-index: var(--z-overlay)
+    }
+/* Small adjustments to input group buttons */
+.input-group .btn {
+    border-radius: 0
+    }
+.input-group .btn:first-child {
+    border-top-left-radius: var(--radius-md);
+    border-bottom-left-radius: var(--radius-md)
+    }
+.input-group .btn:last-child {
+    border-top-right-radius: var(--radius-md);
+    border-bottom-right-radius: var(--radius-md)
+    }

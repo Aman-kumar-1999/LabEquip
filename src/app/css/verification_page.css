@@ -1,0 +1,60 @@
+/* verification_page.css - Page specific styles for Verification Page */
+:root {
+    /* Ensure brand font applies */
+    --font-sans: "Poppins", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Inter, Noto Sans
+    }
+.verify-page html, .verify-page body {
+    height: 100%
+    }
+/* Background with subtle image and gentle overlay to preserve readability */
+.verify-bg {
+    position: relative;
+    min-height: 60vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.9)), url(assets/subtle_background_for_verifica_5_678b82ac.jpg);
+    background-size: cover;
+    background-position: center
+    }
+.verify-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(600px 300px at 20% 20%, rgba(0, 0, 128, 0.08), transparent 60%)
+    }
+/* Card refinements */
+.verification-card {
+    border: 1px solid var(--border);
+    background: var(--surface-2)
+    }
+.verification-card .status-icon {
+    font-size: 3rem
+    }
+@media (min-width: 768px) {
+    .verification-card .status-icon {
+        font-size: 3.5rem
+        }
+    }
+/* Buttons spacing & responsive layout */
+#proceedLoginBtn, #resendBtn {
+    min-width: 220px
+    }
+@media (max-width: 575.98px) {
+    #proceedLoginBtn, #resendBtn {
+        width: 100%
+        }
+    }
+/* System feedback alignment */
+#systemFeedback {
+    box-shadow: var(--shadow-sm)
+    }
+/* Image styling */
+#statusImage {
+    max-height: 360px;
+    object-fit: cover;
+    width: 100%
+    }
+/* Accessibility: ensure focus outlines are visible against overlay */
+.verify-bg :focus-visible {
+    outline: 3px solid var(--outline);
+    outline-offset: 3px
+    }

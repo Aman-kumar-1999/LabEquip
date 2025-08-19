@@ -1,0 +1,51 @@
+/* admin_quotes.css - Page specific styles for Admin Quote Management */
+/* Layout shell: header (sticky from global), left sidebar, main content */
+.app-shell {
+    min-height: 100vh;
+    background: var(--bg-alt)
+    }
+.app-sidebar {
+    width: 280px;
+    border-right: 1px solid var(--border);
+    background: var(--surface-2)
+    }
+.app-sidebar .sidebar-list li {
+    margin-bottom: 6px
+    }
+.app-sidebar .x-nav__link {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-pill)
+    }
+.app-sidebar .x-nav__link.active, .app-sidebar .x-nav__link[aria-current="page"] {
+    background: var(--primary-50);
+    color: var(--text)
+    }
+.app-main {
+    padding: var(--space-5) var(--container-pad)
+    }
+/* Sortable headers affordance */
+#quotesTable thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap
+    }
+#quotesTable tbody tr.quote-row:hover {
+    background: color-mix(in oklab, var(--primary-50), white 70%)
+    }
+/* Loading overlay ensures content remains clickable off */
+#loadingOverlay {
+    z-index: var(--z-overlay)
+    }
+/* Adjust toast look to match theme */
+.toast.text-bg-primary {
+    background-color: var(--color-primary) !important
+    }
+/* Responsive: collapse padding on small screens */
+@media (max-width: 991.98px) {
+    .app-main {
+        padding: var(--space-4)
+        }
+    }

@@ -13,6 +13,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.1",
+    "@fortawesome/fontawesome-free": "^7.0.0",
     "@iconify/icons-ion": "^1.2.10",
     "@iconify/react": "^6.0.0",
     "@mui/icons-material": "^7.3.1",
@@ -22,6 +23,8 @@
     "aos": "^2.3.4",
     "apexcharts": "^5.3.3",
     "axios": "^1.11.0",
+    "bootstrap": "^5.3.7",
+    "chart.js": "^4.5.0",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.12",
     "gray-matter": "^4.0.3",
@@ -39,7 +42,8 @@
     "react-syntax-highlighter": "^15.6.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.22.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

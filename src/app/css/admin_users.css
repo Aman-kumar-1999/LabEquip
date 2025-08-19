@@ -1,0 +1,63 @@
+/* Page-specific CSS for Admin User Management (admin_users.css) */
+/* Layout & Sidebar */
+.admin-layout {
+    align-items: flex-start
+    }
+.admin-sidebar {
+    position: sticky;
+    top: 84px;
+    /* below sticky header */
+    }
+.sidebar-link {
+    color: var(--text);
+    border-radius: var(--radius-pill);
+    padding: 8px 12px
+    }
+.sidebar-link:hover {
+    background: var(--surface-3);
+    text-decoration: none
+    }
+.sidebar-link.active {
+    background: var(--primary-50);
+    color: var(--text);
+    font-weight: 700
+    }
+/* Avatars in table */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: var(--bg-inset)
+    }
+/* Sortable headers cursor */
+th.sortable {
+    cursor: pointer;
+    user-select: none
+    }
+/* Modal sizing tweaks */
+#userModal .modal-content {
+    border: none
+    }
+#userModal .modal-header {
+    border-bottom: 1px solid var(--border)
+    }
+#userModal .modal-footer {
+    border-top: 1px solid var(--border)
+    }
+/* Feedback alert spacing on small screens */
+#systemFeedback {
+    margin-bottom: 16px
+    }
+/* Chart card tweaks */
+#signupChart {
+    max-height: 220px
+    }
+/* Improve responsive spacing */
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        position: static;
+        top: auto
+        }
+    }
