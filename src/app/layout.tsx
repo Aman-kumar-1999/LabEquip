@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
+        {/* <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" rel="stylesheet"/> */}
         {/* <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -44,10 +45,11 @@ export default function RootLayout({
       </head>
       <body className={`${font.className}`}>
         {/* <Header /> */}
-        <HeaderPage />
+        <HeaderPage  />
+        <div style={{ height: "80px" }}></div>
         {children}
-        <Footer />
-        {/* <ScrollToTop /> */}
+        <Footer  /> 
+        
       </body>
       <Script crossOrigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"/>

@@ -11,6 +11,7 @@ import Newsletter from "@/app/components/Home/Newsletter";
 // import './css/style.css';
 // import './css/home_page.css';
 import { Metadata } from "next";
+import LandingPage from "./components/Landing";
 
 export const metadata: Metadata = {
   title: "LabEquip",
@@ -18,8 +19,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
+    <main >
+      <LandingPage />
+      {/* <Hero /> */}
       {/* <Companies />
       <Courses />
       <Mentor />

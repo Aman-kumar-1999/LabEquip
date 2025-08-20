@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     // <!-- Footer (Global) - Included on Home page -->
-    <footer className="x-footer mt-auto">
+    <footer style={{marginTop: "90px"}} className="x-footer mt-auto">
       <div className="l-container">
         <div className="row g-4">
           <div className="col-12 col-md-4">

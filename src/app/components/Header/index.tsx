@@ -23,14 +23,14 @@ export default function HeaderPage() {
                         {/* <!-- Left Nav Links --> */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 x-nav">
                             <li className="nav-item">
-                                <a className="x-nav__link nav-link active" href="./">
+                                <a className="x-nav__link nav-link active" href="/">
                                     <i className="fa-solid fa-house me-1">
                                     </i>
                                     Home
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="x-nav__link nav-link" href="./product_listing.html">
+                                <a className="x-nav__link nav-link" href="/product">
                                     <i className="fa-solid fa-flask-vial me-1">
                                     </i>
                                     Products

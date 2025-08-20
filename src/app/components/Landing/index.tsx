@@ -1,14 +1,13 @@
 
-// import Image from 'next/image'
-// import { Icon } from '@iconify/react/dist/iconify.js'
+
 
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 import Swal from "sweetalert2";
 import Chart from "chart.js/auto";
-import '../../../css/style.css';
-import '../../../css/home_page.css';
+import '../../css/style.css';
+import '../../css/home_page.css';
 
 type User = { name: string } | null;
 type Product = {
@@ -46,7 +45,7 @@ const tableData: Product[] = [
 export default function LandingPage() {
 
 
-  // export default function DashboardPage() {
+  
   // ---- User state ----
   const [user, setUser] = useState<User>(null);
 
@@ -165,94 +164,7 @@ export default function LandingPage() {
   const pageData = sorted.slice((page - 1) * pageSize, page * pageSize);
 
   return (
-    // <div className="p-6">
-    //   {/* Header */}
-    //   <div className="flex justify-between items-center mb-6">
-    //     <div>
-    //       {user ? (
-    //         <div>
-    //           <span className="mr-4">Hello, {user.name}</span>
-    //           <button onClick={handleLogout} className="btn">Logout</button>
-    //         </div>
-    //       ) : (
-    //         <div>Guest Mode</div>
-    //       )}
-    //     </div>
-    //     <div>
-    //       <button className="relative">
-    //         🛒
-    //         <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm">
-    //           {cartCount}
-    //         </span>
-    //       </button>
-    //     </div>
-    //   </div>
-
-    //   {/* Search */}
-    //   <div className="mb-6 relative">
-    //     <input
-    //       className="border p-2 w-full"
-    //       placeholder="Search products..."
-    //       value={query}
-    //       onChange={(e) => setQuery(e.target.value)}
-    //     />
-    //     {suggestions.length > 0 && (
-    //       <div className="absolute bg-white border mt-1 w-full shadow">
-    //         {suggestions.map((s, i) => (
-    //           <button
-    //             key={i}
-    //             className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-    //             onClick={() => {
-    //               setQuery(s);
-    //               setSuggestions([]);
-    //             }}
-    //           >
-    //             {s}
-    //           </button>
-    //         ))}
-    //       </div>
-    //     )}
-    //   </div>
-
-    //   {/* Chart */}
-    //   <div className="mb-6">
-    //     <canvas id="visitsChart" height={120}></canvas>
-    //   </div>
-
-    //   {/* Table */}
-    //   <table className="table-auto w-full border">
-    //     <thead>
-    //       <tr>
-    //         <th onClick={() => setSortKey("name")}>Name</th>
-    //         <th onClick={() => setSortKey("category")}>Category</th>
-    //         <th onClick={() => setSortKey("price")}>Price</th>
-    //         <th>Rating</th>
-    //         <th>Date</th>
-    //         <th>Actions</th>
-    //       </tr>
-    //     </thead>
-    //     <tbody>
-    //       {pageData.map((r, i) => (
-    //         <tr key={i} className="border-t">
-    //           <td>{r.name}</td>
-    //           <td>{r.category}</td>
-    //           <td>${r.price.toFixed(2)}</td>
-    //           <td>{r.rating.toFixed(1)} ⭐</td>
-    //           <td>{new Date(r.date).toLocaleDateString()}</td>
-    //           <td>
-    //             <button
-    //               onClick={() => handleAddToCart(r.sku)}
-    //               className="btn btn-sm"
-    //             >
-    //               Add
-    //             </button>
-    //           </td>
-    //         </tr>
-    //       ))}
-    //     </tbody>
-    //   </table>
-
-    // </div>
+    
 
     <main className="pb-5" id="main">
       <div aria-atomic="true" aria-live="polite" className="x-toast-stack" id="toastStack">
@@ -272,7 +184,7 @@ export default function LandingPage() {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img alt="Lab equipment promotion slide 1" className="d-block w-100 object-fit-cover"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/hero1/1600/640';"
+                
                 src="assets/hero_image_for_research_and_di_1_96344ba9.jpg" />
               <div className="carousel-caption text-start hero-caption">
                 <h1 className="display-5 fw-bold">
@@ -288,7 +200,7 @@ export default function LandingPage() {
             </div>
             <div className="carousel-item">
               <img alt="Lab equipment promotion slide 2" className="d-block w-100 object-fit-cover"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/hero2/1600/640';"
+               
                 src="assets/hero_image_for_biotechnology_e_3_80b3029f.jpg" />
               <div className="carousel-caption text-start hero-caption">
                 <h2 className="fw-bold">
@@ -304,7 +216,7 @@ export default function LandingPage() {
             </div>
             <div className="carousel-item">
               <img alt="Lab equipment promotion slide 3" className="d-block w-100 object-fit-cover"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/hero3/1600/640';"
+                
                 src="assets/hero_image_for_research_and_di_3_65b05f43.jpg" />
               <div className="carousel-caption text-start hero-caption">
                 <h2 className="fw-bold">
@@ -350,7 +262,7 @@ export default function LandingPage() {
             <a aria-label="Browse Pipettes &amp; Tips" className="card category-card h-100 text-reset"
               href="./product_listing.html?category=Pipettes">
               <img alt="Pipettes &amp; Tips" className="card-img-top"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/pipettes/600/400';"
+                
                 src="assets/category_image_for_pipettes_an_1_f12d964e.jpg" />
               <div className="card-body">
                 <h5 className="card-title mb-0">
@@ -363,7 +275,7 @@ export default function LandingPage() {
             <a aria-label="Browse Lab Glassware" className="card category-card h-100 text-reset"
               href="./product_listing.html?category=Glassware">
               <img alt="Lab Glassware" className="card-img-top"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/glassware/600/400';"
+                
                 src="assets/category_image_for_lab_glasswa_1_9587d348.jpg" />
               <div className="card-body">
                 <h5 className="card-title mb-0">
@@ -376,8 +288,7 @@ export default function LandingPage() {
             <a aria-label="Browse Microscopes" className="card category-card h-100 text-reset"
               href="./product_listing.html?category=Microscopes">
               <img alt="Microscopes" className="card-img-top"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/microscopes/600/400';"
-                src="assets/hero_image_for_research_and_di_4_fb27ef2f.jpg" />
+                              src="assets/hero_image_for_research_and_di_4_fb27ef2f.jpg" />
               <div className="card-body">
                 <h5 className="card-title mb-0">
                   Microscopes
@@ -389,7 +300,7 @@ export default function LandingPage() {
             <a aria-label="Browse Reagents" className="card category-card h-100 text-reset"
               href="./product_listing.html?category=Reagents">
               <img alt="Chemical Reagents" className="card-img-top"
-                // onerror="this.onerror=null;this.src='https://picsum.photos/seed/reagents/600/400';"
+                
                 src="assets/hero_image_for_research_and_di_5_c03f0c35.png" />
               <div className="card-body">
                 <h5 className="card-title mb-0">
@@ -418,7 +329,7 @@ export default function LandingPage() {
                   <div className="card product-card h-100">
                     <a className="text-reset" href="./product_details.html?sku=CR-SET-A">
                       <img alt="Chemical Reagent Set A" className="card-img-top"
-                        // onerror="this.onerror=null;this.src='https://picsum.photos/seed/reagentset/800/800';"
+                        
                         src="assets/featured_product_image_for_a_c_1_e61758df.jpg" />
                     </a>
                     <div className="card-body d-flex flex-column">
@@ -446,7 +357,7 @@ export default function LandingPage() {
                   <div className="card product-card h-100">
                     <a className="text-reset" href="./product_details.html?sku=PIP-P200">
                       <img alt="High-Precision Pipette P200" className="card-img-top"
-                        // onerror="this.onerror=null;this.src='https://picsum.photos/seed/p200/800/800';"
+                        
                         src="assets/category_image_for_pipettes_an_3_65dfaf00.jpg" />
                     </a>
                     <div className="card-body d-flex flex-column">
@@ -474,7 +385,7 @@ export default function LandingPage() {
                   <div className="card product-card h-100">
                     <a className="text-reset" href="./product_details.html?sku=MIC-X200">
                       <img alt="Compound Microscope X‑200" className="card-img-top"
-                        // onerror="this.onerror=null;this.src='https://picsum.photos/seed/microscope/800/800';"
+                        
                         src="assets/hero_image_for_biotechnology_e_2_23e5f4e0.jpg" />
                     </a>
                     <div className="card-body d-flex flex-column">
@@ -506,7 +417,7 @@ export default function LandingPage() {
                   <div className="card product-card h-100">
                     <a className="text-reset" href="./product_details.html?sku=BAL-01MG">
                       <img alt="Analytical Balance 0.1mg" className="card-img-top"
-                        // onerror="this.onerror=null;this.src='https://picsum.photos/seed/balance/800/800';"
+                        
                         src="assets/hero_image_for_biotechnology_e_5_bff6e617.jpg" />
                     </a>
                     <div className="card-body d-flex flex-column">
@@ -534,7 +445,7 @@ export default function LandingPage() {
                   <div className="card product-card h-100">
                     <a className="text-reset" href="./product_details.html?sku=CEN-MINI">
                       <img alt="Centrifuge MiniSpin" className="card-img-top"
-                        // onerror="this.onerror=null;this.src='https://picsum.photos/seed/centrifuge/800/800';"
+                        
                         src="assets/hero_image_for_research_and_di_2_0e55544b.jpg" />
                     </a>
                     <div className="card-body d-flex flex-column">
@@ -562,7 +473,7 @@ export default function LandingPage() {
                   <div className="card product-card h-100">
                     <a className="text-reset" href="./product_details.html?sku=GBE-SET">
                       <img alt="Glass Beaker Set" className="card-img-top"
-                        // onError="this.onerror=null;this.src='https://picsum.photos/seed/beakers/800/800';"
+                        
                         src="assets/category_image_for_lab_glasswa_3_29c5dfb1.jpg" />
                     </a>
                     <div className="card-body d-flex flex-column">
@@ -630,22 +541,8 @@ export default function LandingPage() {
                   </small>
                 </span>
               </div>
-              {/* <div className="x-card__body">
-                {loading ? (
-                  <div
-                    className="skeleton w-full"
-                    style={{ height: "280px", borderRadius: "12px" }}
-                  />
-                ) : (
-                  <canvas
-                    ref={canvasRef}
-                    aria-label="Line chart showing weekly visits"
-                    role="img"
-                    height={280}
-                    className="w-full"
-                  />
-                )}
-              </div> */}
+              
+              
               {/* Chart */}
               <div className="x-card__body">
                 <canvas aria-label="Line chart showing weekly visits" id="visitsChart" height={280}></canvas>
@@ -805,104 +702,7 @@ export default function LandingPage() {
         </div>
       </section>
     </main>
-
-
-
-
-
-
-
-
-
-
-    // <!-- Toast / Notification Stack -->
-    // <div aria-atomic="true" aria-live="polite" className="x-toast-stack" id="toastStack">
-    // </div>
-    // <section id='home-section' className='bg-slate-gray'>
-    //   <div className='container pt-16'>
-    //     <div className='grid grid-cols-1 lg:grid-cols-12 lg:gap-1 gap-10 items-center'>
-    //       <div className='col-span-6 flex flex-col gap-8'>
-    //         <div className='flex gap-2 mx-auto lg:mx-0'>
-    //           <Icon
-    //             icon='solar:verified-check-bold'
-    //             className='text-success text-xl inline-block me-2'
-    //           />
-    //           <p className='text-success text-sm font-semibold text-center lg:text-start tracking-widest uppercase'>
-    //             Get 30% off on first enroll
-    //           </p>
-    //         </div>
-    //         <h1 className='text-midnight_text lg:text-start text-center font-semibold leading-tight capitalize'>
-    //           Get Quality Lab Equipment from Top Suppliers
-    //         </h1>
-    //         <p className='text-black/70 text-lg lg:text-start text-center max-w-xl capitalize'>
-    //           Enhance your experiments with premium lab equipment and expert guidance from industry leaders.
-    //         </p>
-    //         <div className='relative rounded-full'>
-    //           <input
-    //             type='text'
-    //             name='course'
-    //             className='py-4 pl-8 pr-20 text-lg w-full text-black rounded-full border border-black/10 focus:outline-hidden focus:border-primary duration-300 shadow-input-shadow'
-    //             placeholder='Search Laboratory Equipment...'
-    //             autoComplete='off'
-    //           />
-    //           <button className='group border border-secondary bg-secondary hover:bg-transparent p-3 rounded-full absolute right-2 top-1.5 duration-300 hover:cursor-pointer'>
-    //             <Icon
-    //               icon='solar:magnifer-linear'
-    //               className='text-white group-hover:text-primary text-2xl inline-block duration-300'
-    //             />
-    //           </button>
-    //         </div>
-    //         <div className='flex items-center justify-between pt-10 lg:pt-4 flex-wrap gap-4'>
-    //           <div className='flex gap-2'>
-    //             <Image
-    //               src='/images/banner/check-circle.svg'
-    //               alt='check-image'
-    //               width={30}
-    //               height={30}
-    //               className='smallImage'
-    //             />
-    //             <p className='text-sm sm:text-lg font-normal text-black'>
-    //               Flexible Schedules
-    //             </p>
-    //           </div>
-    //           <div className='flex gap-2'>
-    //             <Image
-    //               src='/images/banner/check-circle.svg'
-    //               alt='check-image'
-    //               width={30}
-    //               height={30}
-    //               className='smallImage'
-    //             />
-    //             <p className='text-sm sm:text-lg font-normal text-black'>
-    //               Guided Laboratory Equipment Selection
-    //             </p>
-    //           </div>
-    //           <div className='flex gap-2'>
-    //             <Image
-    //               src='/images/banner/check-circle.svg'
-    //               alt='check-image'
-    //               width={30}
-    //               height={30}
-    //               className='smallImage'
-    //             />
-    //             <p className='text-sm sm:text-lg font-normal text-black'>
-    //               Peer Support Community
-    //             </p>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className='col-span-6 flex justify-center'>
-    //         <Image
-    //           src='/images/banner/landing_page.png'
-    //           alt='nothing'
-    //           width={1000}
-    //           height={805}
-    //         />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   )
 }
 
-// export default Hero
+
