@@ -1,19 +1,21 @@
 'use client'
 
+import Link from "next/link"
+
 export default function HeaderPage() {
     return (
 
         <header className="x-header shadow-sm fixed-top">
             <nav aria-label="Primary Navigation" className="navbar navbar-expand-lg x-header__inner">
                 <div className="container-fluid px-0">
-                    <a aria-label="Go to Home" className="d-flex align-items-center" href="/">
-                        {/* <img src="logo.png" alt="Company Logo" className="x-logo me-2" /> */}
-                        <span aria-label="Company Logo" className="x-logo me-2" role="img">
-                    </span>
-                        {/* <span className="fw-bold d-none d-md-inline">
-                        LabEquip
-                    </span> */}
-                    </a>
+                    <Link aria-label="Go to Home" className="d-flex align-items-center" href="/">
+
+                        {/* <span aria-label="Company Logo" className="x-logo me-2" role="img"></span> */}
+
+                        <strong style={{ fontSize: "2.25rem" }} className="me-2">
+                            LabEquip
+                        </strong>
+                    </Link>
                     <button aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation"
                         className="navbar-toggler" data-bs-target="#primaryNav" data-bs-toggle="collapse" type="button">
                         <span className="navbar-toggler-icon">
@@ -23,32 +25,32 @@ export default function HeaderPage() {
                         {/* <!-- Left Nav Links --> */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 x-nav">
                             <li className="nav-item">
-                                <a className="x-nav__link nav-link active" href="/">
+                                <Link className="x-nav__link nav-link active" href="/">
                                     <i className="fa-solid fa-house me-1">
                                     </i>
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="x-nav__link nav-link" href="/product">
+                                <Link className="x-nav__link nav-link" href="/product">
                                     <i className="fa-solid fa-flask-vial me-1">
                                     </i>
                                     Products
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="x-nav__link nav-link" href="./comparison_page.html">
+                                <Link className="x-nav__link nav-link" href="./comparison_page.html">
                                     <i className="fa-solid fa-code-compare me-1">
                                     </i>
                                     Compare
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="x-nav__link nav-link" href="./order_history.html">
+                                <Link className="x-nav__link nav-link" href="./order_history.html">
                                     <i className="fa-solid fa-receipt me-1">
                                     </i>
                                     Orders
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         {/* <!-- Search --> */}
@@ -67,34 +69,38 @@ export default function HeaderPage() {
                         {/* <!-- User Actions --> */}
                         <div className="d-flex align-items-center gap-2">
                             {/* <!-- Cart --> */}
-                            <a aria-label="View cart" className="btn x-btn x-btn--secondary position-relative"
+                            <Link aria-label="View cart" className="btn x-btn x-btn--secondary position-relative"
                                 href="./cart_page.html" id="cartBtn">
                                 <i className="fa-solid fa-cart-shopping">
                                 </i>
-                                <span className="visually-hidden">
+                                {/* <span className="visually-hidden">
+                                    Cart
+                                </span> */}
+                                <span className="">
                                     Cart
                                 </span>
+                                
                                 <span
                                     className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
                                     id="cartCountBadge">
                                     0
                                 </span>
-                            </a>
+                            </Link>
                             &nbsp;
                             {/* <!-- Guest: Login/Register --> */}
                             <div className="d-flex gap-2" id="guestActions">
-                                <a className=" x-btn x-btn--primary" href="./login_page.html">
+                                <Link className=" x-btn x-btn--primary" href="/login">
                                     <i className="fa-solid fa-right-to-bracket me-1">
                                     </i>
                                     Login
-                                </a>
+                                </Link>
                                 &nbsp;
 
-                                <a className=" x-btn x-btn--secondary" href="./register_page.html">
+                                <Link className=" x-btn x-btn--secondary" href="/register">
                                     <i className="fa-solid fa-user-plus me-1">
                                     </i>
                                     Register
-                                </a>
+                                </Link>
                                 &nbsp;
                             </div>
                             {/* <!-- Authenticated: My Account Dropdown --> */}

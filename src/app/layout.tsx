@@ -3,9 +3,10 @@ import Script from "next/script";
 import './globals.css'
 // import Header from '@/app/components/Layout/Header'
 import HeaderPage from '@/app/components/Header'
-import Footer from '@/app/components/Layout/Footer'
+import FooterPage from '@/app/components/Footer'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "sweetalert2/dist/sweetalert2.min.css";
+import './css/style.css';
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -48,7 +49,7 @@ export default function RootLayout({
         <HeaderPage  />
         <div style={{ height: "80px" }}></div>
         {children}
-        <Footer  /> 
+        <FooterPage  /> 
         
       </body>
       <Script crossOrigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
