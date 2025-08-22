@@ -1,5 +1,9 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Register User",
+};
 
 export default function SignupPage() {
     return (

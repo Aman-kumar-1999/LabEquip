@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "404 Page | Venus ",
+  title: "404 Page",
 };
 
 const ErrorPage = () => {

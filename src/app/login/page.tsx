@@ -5,6 +5,11 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 import Link from "next/link";
+import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "User Management",
+// };
 
 // Demo users (front-end only)
 const demoUsers = [
@@ -12,37 +17,37 @@ const demoUsers = [
         email: "admin@site.com",
         password: "Admin@123",
         role: "admin",
-        redirect: "/admin_dashboard",
+        redirect: "/admin/dashboard",
     },
     {
         email: "support@site.com",
         password: "HelpDesk1!",
         role: "admin",
-        redirect: "/admin_dashboard",
+        redirect: "/admin/dashboard",
     },
     {
         email: "manager@org.com",
         password: "Passw0rd!",
         role: "b2b",
-        redirect: "/user_dashboard",
+        redirect: "/user/dashboard",
     },
     {
         email: "procure@org.com",
         password: "BuyMore#1",
         role: "b2b",
-        redirect: "/user_dashboard",
+        redirect: "/user/dashboard",
     },
     {
         email: "researcher@lab.com",
         password: "Passw0rd!",
         role: "b2c",
-        redirect: "/user_dashboard",
+        redirect: "/user/dashboard",
     },
     {
         email: "scientist@lab.com",
         password: "Lab@2024",
         role: "b2c",
-        redirect: "/user_dashboard",
+        redirect: "/user/dashboard",
     },
 ];
 

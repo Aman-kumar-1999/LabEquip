@@ -1,6 +1,6 @@
+
 'use client';
 
-import { Metadata } from "next";
 import { Poppins } from 'next/font/google';
 import noUiSlider from "nouislider";
 import "nouislider/dist/nouislider.css";
