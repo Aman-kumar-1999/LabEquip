@@ -573,6 +573,10 @@ body::before {
     color: var(--text);
     background: var(--primary-50)
 }
+.x-nav__link[id="page"] {
+    color: var(--text);
+    background: var(--primary-50)
+}
 
 /* Buttons */
 .x-btn {
