@@ -4,12 +4,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
- import '../../css/admin_dashboard.css'
+import '../../css/admin_dashboard.css'
 
 const AdminSidebar = () => {
   const pathname = usePathname();
 
   const navItems = [
+    // { href: "/admin/landing", label: "Home", icon: "fa-solid fa-home" },
     { href: "/admin/dashboard", label: "Dashboard", icon: "fa-solid fa-gauge-high" },
     { href: "/admin/product", label: "Products", icon: "fa-solid fa-boxes-stacked" },
     { href: "/admin/bulk-import", label: "Bulk Import", icon: "fa-solid fa-file-import" },
@@ -41,7 +42,7 @@ const AdminSidebar = () => {
         })}
 
         <div className="mt-3 px-2">
-          <Link className="x-btn x-btn--outline w-100" href="/admin/">
+          <Link className="x-btn x-btn--outline w-100" href="/">
             <i className="fa-solid fa-arrow-up-right-from-square me-1" />
             Go to Store
           </Link>

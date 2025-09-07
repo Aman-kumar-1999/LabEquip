@@ -15,6 +15,7 @@
     min-height: calc(100vh - var(--admin-header-h));
     border-right: 1px solid var(--border);
     background: var(--surface-2)
+    
 }
 
 .admin-sidebar .nav-link {

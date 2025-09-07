@@ -3,7 +3,7 @@
 import { useState } from "react";
 import "../../css/order_history.css";
 //  import '../../css/admin_dashboard.css';
-import OrderHistory from "./history";
+import OrderHistory from "./history/page";
 import OrderManagementPage from "./order-management/page";
 import Link from "next/link";
 

@@ -12,7 +12,7 @@
 /* Ensure carousel images maintain aspect on large screens */
 .object-fit-cover {
     object-fit: cover;
-    max-height: 640px
+    max-height: 840px
     }
 /* Category cards */
 .category-card {

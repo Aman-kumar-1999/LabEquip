@@ -186,7 +186,7 @@ export default function LandingPage() {
               <img alt="Lab equipment promotion slide 1" className="d-block w-100 object-fit-cover"
 
                 // src="assets/hero_image_for_research_and_di_1_96344ba9.jpg" 
-                src="assets/landing.png"
+                src="/assets/landing.png"
               />
               <div className="carousel-caption text-start hero-caption">
                 {/* <h1 className="display-5 fw-bold">
@@ -203,7 +203,7 @@ export default function LandingPage() {
             <div className="carousel-item">
               <img alt="Lab equipment promotion slide 2" className="d-block w-100 object-fit-cover"
 
-                src="assets/landing1.png" />
+                src="/assets/landing1.png" />
               <div className="carousel-caption text-start hero-caption">
                 {/* <h2 className="fw-bold">
                   Trusted by B2B &amp; B2C Scientists
@@ -219,7 +219,7 @@ export default function LandingPage() {
             <div className="carousel-item">
               <img alt="Lab equipment promotion slide 3" className="d-block w-100 object-fit-cover"
 
-                src="assets/landing2.png" />
+                src="/assets/landing2.png" />
               <div className="carousel-caption text-start hero-caption">
                 {/* <h2 className="fw-bold">
                   Bulk Orders &amp; Quotes
